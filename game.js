@@ -1,6 +1,7 @@
 var game = function () {
 
-var userChoice = prompt("Do you choose rock, paper or scissors?");
+//var userChoice = getElementsByName(user_choice);
+var userChoice = "scissors";
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
 	computerChoice = "rock";
@@ -8,7 +9,7 @@ if (computerChoice < 0.34) {
 	computerChoice = "paper";
 } else {
 	computerChoice = "scissors";
-} console.log("Computer: " + computerChoice);
+}
 
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) {
@@ -32,12 +33,11 @@ var compare = function (choice1, choice2) {
         if (choice2 === "paper") {
             return ("scissors wins over paper so you win this game.");
         } else {
-            return ("rock wins wins over scissors so you loose this game.");
+            return ("rock wins over scissors so you loose this game.");
         }
     }
 };
 
-document.write("You picked " + userChoice + ", the computer choose " + computerChoice + ", ");
-document.write(compare(userChoice, computerChoice));
+document.getElementById('answer').innerHTML =  "You picked " + userChoice + ", the computer choose " + computerChoice + ", " + compare(userChoice, computerChoice);
 document.close();
 };

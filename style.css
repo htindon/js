@@ -1,4 +1,39 @@
 body {
+	background-color: beige;
+}
+
+#main {
 	background-color: #d0e4fe;
 	font-family: "Times";
+	margin-top: 10px;
+	margin-left:100px;
+	margin-right:100px;
+	padding: 20px;
+	border-radius: 20px;	
+}
+
+a {
+	text-decoration: none;
+	color: orange;
+}
+
+a:hover { color: red }
+a:visited { color: grey }
+
+form select {
+	font-size: 18px;
+	border-radius: 5px;
+	font-family: "Courier";
+	background-color: beige;
+}
+
+form button {
+	font-size: 18px;
+	border-radius: 5px;
+	font-family: "Courier";
+	background-color: beige;
+}
+
+form button:hover {
+	background-color: grey;
 }

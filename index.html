@@ -1,19 +1,31 @@
+<!DOCTYPE HTML>
 <html>
   <head>
+    <title>Learning Js</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+  <div id="main">
     <h1>Learning Cool Stuff</h1>
-    <h2>Learning Javascript</h2>
+    <h2>Javascript from scratch</h2>
     <p>Learning Ressources:</p>
     <ul>
        <li><a href="http://www.codecademy.com">CodeAcademy</a></li>
+       <li><a href="http://www.w3schools.com">W3Schools</a></li>
     </ul>
     <h3>Rock, Paper, Scissors</h3>
     <p>The Javascript course on CodeAcademy helps you build a very simple rock, paper or scissors game. It then invites you to go further on your own so I decided to look for ways to execute it in my browser and make it a bit prettier (still working on that part though).</p>
     <form>
-      <button type="button" value="Play" onclick="game();">Play!</button>
+      <p>Please pick an option:
+      <select name="user_choice" id="slt_user_choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+      </select></p>
+      <p><button type="button" value="Play" onclick="game()">Play!</button></p>
     </form>
+    <p id="answer"></p>
+    </div> <!-- main  -->
     <script type="text/javascript" src="game.js"></script>
   </body>
 </html>
