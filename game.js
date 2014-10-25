@@ -1,7 +1,9 @@
 var game = function () {
 
-//var userChoice = getElementsByName(user_choice);
-var userChoice = "scissors";
+var mySelect = document.getElementById("user_choice");
+var userChoice = mySelect.options[mySelect.selectedIndex].value;
+//var userChoice = "paper";
+
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
 	computerChoice = "rock";
