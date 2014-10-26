@@ -2,7 +2,6 @@ var game = function () {
 
 var mySelect = document.getElementById("user_choice");
 var userChoice = mySelect.options[mySelect.selectedIndex].value;
-//var userChoice = "paper";
 
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
