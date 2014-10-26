@@ -26,8 +26,24 @@
       </select></p>
       <p><button type="button" value="Play" onclick="game()">Play!</button></p>
     </form>
-    <p id="answer"></p>
-    </div> <!-- main  -->
+    <div class=answer_box>
+	<p id="answer">Make your choice and click the "Play!" button.</p>
+    </div> <!-- answer box -->
+	<h3>Mini Quiz</h3>
+	<p>I need to quiz myself sometimes to remember some simple things so I thought it would be a good idea to do it as one of my small projects.</p>
+	<form>
+		<p>This is a test question:</p>
+		<input id="a", type="checkbox" name="A", value="a">Answer A<br>
+		<input id="b", type="checkbox" name="B", value="b">Answer B<br>
+		<input id="c", type="checkbox" name="C", value="c">Answer C<br>
+		<input id="d", type="checkbox" name="D", value="d">Answer D<br>
+      	<button type="button" name="validate", value="Play", alt="Validate", onclick="quiz()">Validate</button><br>
+	</form>
+	<div class="answer_box">
+  	  <p id="answer_quiz">Pick the answers or answers you think are right and clock the "Validate" button to check them.</p>
+	</div> <!-- answer box -->
+  </div> <!-- main  -->
     <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="quiz.js"></script>
   </body>
 </html>

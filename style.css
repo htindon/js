@@ -3,14 +3,30 @@ body {
 	background-image: url(school.png);
 }
 
+h1, h2, h3 {
+	font-family: Georgia;
+}
+
 #main {
 	background-image: url(swirl.png);
-	font-family: "Times";
 	margin-top: 10px;
 	margin-left:100px;
 	margin-right:100px;
 	padding: 20px;
 	border-radius: 20px;	
+}
+
+#main p, a, form select, form button, form {
+	font-size: 20px;
+	font-family: Garamond;
+}
+
+.answer_box {
+	background-color: beige;
+	text-align: center;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 15px;
 }
 
 a {
@@ -22,9 +38,7 @@ a:hover { color: red }
 a:visited { color: grey }
 
 form select, form button {
-	font-size: 18px;
 	border-radius: 5px;
-	font-family: "Courier";
 	background-color: beige;
 }
 
