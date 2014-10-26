@@ -20,6 +20,7 @@ var quiz = function () {
 			} else if (user[i] != answers[i]) {
 				explanation.push("Answer " + document.getElementById(possible[i]).name + ": " + document.getElementById(possible[i]).text + "was false.");
 			}
+			i++;
 		}
 		document.getElementById("answer_quiz").innerHTML = explanation;
 	}
@@ -37,7 +38,7 @@ var quiz = function () {
 		i++;
 	}
 	if (compareArrays(trueAnswers, userAnswers)) {
-		document.getElementById("answer_quiz").innerHTML = "Congratulations, your answers were right.";
+		document.getElementById("answer_quiz").innerHTML = "Congratulations!";
 	} else {
 		explainErrors(userAnswers, trueAnswers, possibleAnswers);
 	}
