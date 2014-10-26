@@ -13,12 +13,15 @@ var quiz = function () {
 
 	var explainErrors = function (user, answers, possible) {
 		var i = 0;
-		var explanation = "";
+		var explanation = "Nice Try!";
+		var myList = document.getElementById(possible[i]);
 		while (i < possible.length) {
 			if (user[i] === "false" && answers[i] === "true") {
-				explanation.push("Answer " + document.getElementById(possible[i]).name + ": " + document.getElementById(possible[i]).text + "was true.");
+				explanation = explanation + "<br>Answer " + document.getElementById(possible[i]).name + " was true.";
+//				myList.className = quiz_false;
 			} else if (user[i] != answers[i]) {
-				explanation.push("Answer " + document.getElementById(possible[i]).name + ": " + document.getElementById(possible[i]).text + "was false.");
+				explanation = explanation + "<br>Answer " + document.getElementById(possible[i]).name + " was false.";
+//				myList.className = quiz_false;
 			}
 			i++;
 		}
