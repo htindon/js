@@ -18,10 +18,12 @@ var quiz = function () {
 		while (i < possible.length) {
 			if (user[i] === "false" && answers[i] === "true") {
 				explanation = explanation + "<br>Answer " + document.getElementById(possible[i]).name + " was true.";
-//				myList.className = quiz_false;
+				document.getElementById('quiz_img' + possible[i]).src = "red.jpg";
 			} else if (user[i] != answers[i]) {
 				explanation = explanation + "<br>Answer " + document.getElementById(possible[i]).name + " was false.";
-//				myList.className = quiz_false;
+				document.getElementById('quiz_img' + possible[i]).src = "red.jpg";
+			} else {
+				document.getElementById('quiz_img' + possible[i]).src = "green.jpg";
 			}
 			i++;
 		}
@@ -42,8 +44,14 @@ var quiz = function () {
 	}
 	if (compareArrays(trueAnswers, userAnswers)) {
 		document.getElementById("answer_quiz").innerHTML = "Congratulations!";
+	    var j = 0;
+		while (j < possibleAnswers.length) { 
+		document.getElementById('quiz_img' + possibleAnswers[j]).src = "green.jpg";
+		j++;
+		}
 	} else {
 		explainErrors(userAnswers, trueAnswers, possibleAnswers);
 	}
+
 	document.close();
 };
